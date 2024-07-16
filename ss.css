@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(16, 16, 16, 0.8), rgba(16, 16, 16, 0.8)), url(./bday.png) ;
+  background-size: auto;
+  font-family: "Playwrite FR Moderne", cursive;
+}
+
+audio {
+  position: absolute;
+  opacity: 0;
+}
+
+.welcomeCover{
+  z-index: 99999;
+  position: fixed;
+  top:0;
+  left: 0;
+  bottom:0;
+  height: 100vh;
+  right: 0;
+    background: url("welcomeBg.jpg");
+      background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+ align-items: center;
+      justify-content: center;
+      transition: 2s all ease;
+      cursor: pointer;
+}
+.welcomeCover .songPlayBtn{
+width: 150px;
+height: 150px;
+}
+p {
+  margin: 0em 5em 4em 5em;
+}
+
+h1, p {
+  text-align: left;
+  line-height: 1.3;
+  /* font-family: Lora, serif; */
+}
+
+.ss {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 40px;
+    padding: 20px 19px;
+}
+.ss b {
+    color: red;
+}
+
+.glowIn {
+  color: white;
+  font-weight: bold;
+}
+.from {
+   color: #d6ff00;
+   font-weight: bold; 
+}
+.glowIn span {
+  animation: glow-in 0.8s both;
+}
+
+@keyframes glow-in {
+  from {
+    opacity: 0;
+  }
+  65% {
+    opacity: 1;
+    text-shadow: 0 0 25px white;
+  }
+  75% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.7;
+  }
+}

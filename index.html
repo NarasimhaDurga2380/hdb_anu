@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Anu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./ss.css" />
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.32.0/tsparticles.min.js"></script>
+  <script src="./app.js"></script>
+</head>
+
+<body>
+  <div class="welcomeCover" onclick="playAudio()">
+    <img class="songPlayBtn " src="playBtn.gif" alt="ssr">
+    <p>Click Me 💖</p>
+  </div>
+  <audio controls autoplay loop=loop id="song">
+    <source src="hbd.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <div class="ss">
+    <h2><b>Happy Birthday ANU 🍰</b></h2>
+  </div>
+  <div id="tsparticles"></div>
+  <script>
+    "use strict";
+    const stringsList = [
+      "Sorry Sorry Sorry 😌",
+      "I am always ready to say sorry until I get excused. Because Its been so regretting staying away from you.🙏",
+      "You are the one whom I always have a great respect for. 🙂‍",
+      "You are the one whom I always wish the success for 🙂‍",
+      "You are the one whom I always care about the health for 🤗",
+      "You are the one whom I always treat as my Family 🙂",
+      "You are the one whom I always wanna see smiling 😌",
+      "Wishing You a very Happy Birthday 🍰 ",
+      "Anuuuuuuuuu. 🥳"
+  ]
+
+    function showText(text, i) {
+      return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            makeTextGlow(text)
+            resolve(true);
+          }, i == 1 ? 3000  : 2000);
+        });
+    };
+    async function playAudio() {
+      document.getElementById("song")?.play();
+      document.querySelector(".welcomeCover").style.display = "none";
+      for(let i = 0; i < stringsList.length;i++) {
+        await showText(stringsList[i], i);
+      }
+    }
+
+  </script>
+</body>
+
+</html>
